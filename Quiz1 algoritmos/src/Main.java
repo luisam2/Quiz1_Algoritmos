@@ -1,6 +1,7 @@
 
 
 
+import model.Logic;
 import processing.core.PApplet;
 
 public class Main extends PApplet {
@@ -15,17 +16,23 @@ public class Main extends PApplet {
 		
 	}
 	
+	Logic logic;
 	public void setup() {
 		
-		
+		 logic = new Logic(this);
 	}
 	
 	public void draw() {
-		background (255);
-		
+		background(255);
+		logic.pintar();
 	}
 
 	public void mousePressed() {
+		
+			if(mouseButton == RIGHT) {
+				logic.nuevaFigura();
+			}
+			//control.getLogic().moverFigura();
 		
 	}
 	

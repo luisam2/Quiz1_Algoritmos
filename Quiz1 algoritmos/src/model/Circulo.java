@@ -26,7 +26,7 @@ public class Circulo {
 		// TODO Auto-generated method stub
 		
 		
-		this.app.rect(posX, posY, tam, tam);
+		this.app.circle(posX, posY, tam);
 		this.getApp().fill(0);
 		this.getApp().text(""+ getValor(), getPosX(), getPosY());
 	}
@@ -36,7 +36,7 @@ public class Circulo {
 			this.posX += this.dir;
 
 			
-			if(this.posX < 0|| this.posX>800) {
+			if(this.posX < 0|| this.posX>500) {
 				this.dir*= -1;
 			}
 		} 

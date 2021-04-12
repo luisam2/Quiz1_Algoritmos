@@ -37,7 +37,7 @@ public class Cuadrado {
 			this.posX += this.dir;
 			this.posY += this.dir;
 			
-			if(this.posX < 0|| this.posX>800 || this.posY <0 || this.posY>800) {
+			if(this.posX < 0|| this.posX>500 || this.posY <0 || this.posY>500) {
 				this.dir*= -1;
 			}
 		} 

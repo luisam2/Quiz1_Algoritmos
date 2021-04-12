@@ -13,6 +13,10 @@ public class Logic {
 	
 	public Logic(PApplet app) {
 		this.app = app;
+		textStrings = app.loadStrings("./../texto");
+		
+		listCirculos = new ArrayList<>();
+		listCuadrados = new ArrayList<>();
 		
 		for(int i=0; i< textStrings.length;i++) {
 			String [] txtSplit = textStrings[i].split(" ");
@@ -25,5 +29,30 @@ public class Logic {
 		}
 	}
 	
+	public void pintar() {
+		for(int i = 0; i< listCirculos.size(); i++) {
+			listCirculos.get(i).pintar();
+			listCirculos.get(i).mover();
+		}
+		
+		for(int i = 0; i< listCuadrados.size(); i++) {
+			listCuadrados.get(i).pintar();
+			listCuadrados.get(i).mover();
+		}
+		
+		
+			
+		
+	}
+	
+	public void nuevaFigura() {
+		int r = (int)this.app.random(3);
+		if(r==1) {
+			listCuadrados.add(new Cuadrado(this.app, (int) this.app.random(30,100),(int) this.app.random(100,500) , (int) this.app.random(100,500), (int) this.app.random(10), (int) this.app.random(30)));
+		} 
+		if(r==2) {
+			listCirculos.add(new Circulo(this.app, (int) this.app.random(30,100),(int) this.app.random(100,500) , (int) this.app.random(100,500), (int) this.app.random(10), (int) this.app.random(30)));
+		}
+	}
 	
 }

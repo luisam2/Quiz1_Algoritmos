@@ -7,7 +7,7 @@ public class Main extends PApplet {
 	
 
 	public static void main(String[]args) {
-		
+		PApplet.main(Main.class.getName());
 	}
 	
 	public void settings() {

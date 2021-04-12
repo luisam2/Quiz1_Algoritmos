@@ -20,7 +20,6 @@ public class Circulo {
 		this.dir = dir;
 		this.valor = valor;
 		this.stop = true;
-		this.app.fill(this.app.random(255),this.app.random(255),this.app.random(255));
 	}
 	public void pintar() {
 		// TODO Auto-generated method stub

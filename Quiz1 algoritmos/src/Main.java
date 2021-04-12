@@ -29,6 +29,8 @@ public class Main extends PApplet {
 
 	public void mousePressed() {
 		
+		logic.moverFigura();
+		
 			if(mouseButton == RIGHT) {
 				logic.nuevaFigura();
 			}
